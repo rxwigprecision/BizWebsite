@@ -110,30 +110,43 @@
       font-weight: bold;
     }
 
-    h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin: 16px 0 20px; max-width: 720px; } margin: 16px 0 20px; max-width: 720px; }
+    h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin: 16px 0 20px; max-width: 720px; }
     .hero p { font-size: 1.12rem; color: var(--muted); max-width: 630px; }
     .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 
-    .visual {
+    .photo-frame {
+      overflow: hidden;
       min-height: 360px;
       border: 1px solid #d7c7b3;
-      background: linear-gradient(145deg, #e8ddd0, #cdb89e 58%, #f4ece2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 26px;
-      text-align: center;
+      background: #e9dfd3;
     }
 
-    .visual-inner {
-      border: 1px solid rgba(128,97,62,.55);
-      padding: 34px 22px;
-      max-width: 300px;
-      background: rgba(255,253,249,.55);
+    .photo-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
     }
 
-    .visual .monogram { font: 4rem Georgia, serif; color: var(--gold-dark); }
-    .visual p { font-size: .92rem; color: #55473a; }
+    .contact-photo {
+      overflow: hidden;
+      border: 1px solid rgba(255,248,240,.22);
+    }
+
+    .contact-photo img {
+      display: block;
+      width: 100%;
+      min-height: 360px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-photo-caption {
+      color: #e6ddd2;
+      font-size: .9rem;
+      margin-top: 12px;
+    }
 
     section { padding: 76px 0; }
     .section-head { text-align: center; max-width: 700px; margin: 0 auto 38px; }
@@ -147,6 +160,7 @@
     .card p { color: var(--muted); font-size: .96rem; }
 
     .about { background: var(--cream); }
+
     .about-grid {
       display: grid;
       grid-template-columns: .85fr 1.15fr;
@@ -167,19 +181,7 @@
     .contact { background: var(--ink); color: #fff8f0; }
     .contact .section-head p { color: #d9cfc5; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-    .contact-box { background: #fffdf9; color: var(--ink); padding: 28px; }
-    label { display: block; font-size: .88rem; margin: 13px 0 5px; }
 
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #d9cec2;
-      background: #fff;
-      font: inherit;
-      border-radius: 0;
-    }
-
-    textarea { min-height: 115px; resize: vertical; }
     .note { font-size: .82rem; color: var(--muted); }
 
     footer {
@@ -189,19 +191,25 @@
       font-size: .82rem;
     }
 
-    footer .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
     @media (max-width: 780px) {
       .nav { align-items: flex-start; flex-direction: column; }
       nav { gap: 13px; }
       .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
       .hero { padding: 58px 0; }
-      .visual { min-height: 260px; }
+      .photo-frame, .photo-frame img, .contact-photo img { min-height: 260px; }
       .cards, .steps { grid-template-columns: 1fr; }
       section { padding: 56px 0; }
     }
   </style>
 </head>
+
 <body>
   <div class="topbar">Personalized cranial prosthesis support • Atlanta, Georgia</div>
 
@@ -211,6 +219,7 @@
         Rx Wig Precision, LLC
         <small>Personalized cranial prosthesis care</small>
       </a>
+
       <nav aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#approach">Our Approach</a>
@@ -225,23 +234,29 @@
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">We provide personalized cranial prosthesis solutions that complement individual needs, preferences, and lifestyle.</div>
-          <h1>Hair loss is a deeply personal experience that affects appearance, self confidence, and emotional well-being.  We are here to partner with you for unique solutions.</h1>
+          <div class="eyebrow">
+            We provide personalized cranial prosthesis solutions that complement individual needs, preferences, and lifestyle.
+          </div>
+
+          <h1>
+            Hair loss is a deeply personal experience that affects appearance, self confidence, and emotional well-being. We are here to partner with you for unique solutions.
+          </h1>
+
           <p>
-            Curated, unique, and thoughtful care for men, woman, and children that are experiencing any type of hair loss.  We desire to partner with you to explore hair replacement options.  
+            Curated, unique, and thoughtful care for men, women, and children experiencing any type of hair loss. We desire to partner with you to explore hair replacement options.
           </p>
+
           <div class="actions">
-            <a class="btn" href="https://calendly.com/rxwigprecision-info" target="_blank" rel="noopener noreferrer">Book a Consultation</a>
-            <a class="btn secondary" href="#services">Explore Services</a>
+            <a class="btn" href="https://calendly.com/rxwigprecision-info" target="_blank" rel="noopener noreferrer">
+              Book a Consultation
+            </a>
           </div>
         </div>
 
-        <div class="visual" role="img" aria-label="Elegant neutral brand panel">
-          <div class="visual-inner">
-            <div class="monogram">Rx Wig Precision</div>
-            <div class="eyebrow">Medical Cranial Prothesis Solutions</div>
-            <p>Personalized care.  Thoughtful process.</p>
-          </div>
+        <div class="photo-frame">
+          <img src="hero-wig.jpg"
+               alt="Long, dark brown hair wig displayed on a mannequin in a warm, elegant setting"
+               loading="eager">
         </div>
       </div>
     </section>
@@ -250,7 +265,7 @@
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">Services</div>
-          <h2>A Process Personalized for You. </h2>
+          <h2>A Process Personalized for You.</h2>
           <p>
             Every person's needs, preferences, and circumstances are different. We begin by listening
             and discussing the options that may be right for you.
@@ -261,7 +276,7 @@
           <article class="card">
             <div class="num">01</div>
             <h3>Cranial Prosthesis Consultation</h3>
-            <p>A private conversation about your needs, style preferences, insurance coverages, and the hair replacement options available to you.</p>
+            <p>A private conversation about your needs, style preferences, insurance coverage, and the hair replacement options available to you.</p>
           </article>
 
           <article class="card">
@@ -272,7 +287,7 @@
 
           <article class="card">
             <div class="num">03</div>
-            <h3>Maintenance &amp; Support </h3>
+            <h3>Maintenance &amp; Support</h3>
             <p>Steps and guidance on prosthesis care and maintenance for longevity.</p>
           </article>
         </div>
@@ -292,14 +307,15 @@
         <div>
           <div class="eyebrow">The Rx Wig Precision mission</div>
           <h2>Care delivered with compassion and precision.</h2>
-          <p class="muted">
-           Our mission is to precisely combine personalized service, compassion, and project management to help individuals navigate their hair-loss journey with confidence and peace of mind.
-We provide a process that facilitates questions, choices, and decision making at your own pace.
 
+          <p class="muted">
+            Our mission is to precisely combine personalized service, compassion, and project management to help individuals navigate their hair-loss journey with confidence and peace of mind. We provide a process that facilitates questions, choices, and decision making at your own pace.
           </p>
+
           <p class="muted">
             We value discretion, clear communication, and personalized attention throughout your consultation and fitting process.
           </p>
+
           <a class="btn" href="#contact">Let's Talk About Your Needs</a>
         </div>
       </div>
@@ -313,7 +329,7 @@ We provide a process that facilitates questions, choices, and decision making at
           <p>
             Coverage for cranial prostheses varies by plan and individual circumstances. We encourage
             clients to contact their insurer to ask about eligibility, documentation, reimbursement,
-            and any required prescription.  If assistance is needed, you can schedule a consultation and we can complete this task for you. 
+            and any required prescription. If assistance is needed, you can schedule a consultation and we can discuss next steps.
           </p>
         </div>
 
@@ -330,16 +346,9 @@ We provide a process that facilitates questions, choices, and decision making at
 
           <div class="step">
             <h3>Discuss next steps</h3>
-            <p class="muted">Email or schedule a consult with Rx Wig Precision to discuss the information you have and what documentation is required.</p>
-          </div>
-          
-            <p class="muted">delete this</p>
+            <p class="muted">Email or schedule a consultation with Rx Wig Precision to discuss the information you have and what documentation is required.</p>
           </div>
         </div>
-
-        <p class="note" style="text-align:center;margin-top:24px">
-          delete this
-        </p>
       </div>
     </section>
 
@@ -375,55 +384,21 @@ We provide a process that facilitates questions, choices, and decision making at
 
             <p><strong>Prefer to choose your own appointment time?</strong></p>
             <p>Use our online booking page to view available consultation times.</p>
-            <a class="btn" href="https://calendly.com/rxwigprecision-info" target="_blank" rel="noopener noreferrer">Schedule with Calendly</a>
+
+            <a class="btn" href="https://calendly.com/rxwigprecision-info" target="_blank" rel="noopener noreferrer">
+              Schedule with Calendly
+            </a>
           </div>
 
-          <div class="contact-box">
-            <div class="eyebrow">Consultation inquiry</div>
-            <h3>How can we assist you?</h3>
-            <p class="muted">Complete the form to prepare an inquiry addressed to our business email.</p>
-
-            <form id="contactForm">
-              <label for="name">Full name *</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your full name" required>
-
-              <label for="email">Email address *</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email address" required>
-
-              <label for="phone">Phone number (optional)</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Enter your phone number">
-
-              <label for="reason">How may we help you? *</label>
-              <select id="reason" name="reason" required>
-                <option value="">Please select an option</option>
-                <option value="Private consultation">Schedule a private consultation</option>
-                <option value="Cranial prosthesis services">Ask about cranial prosthesis services</option>
-                <option value="Fitting and styling">Ask about fitting and styling</option>
-                <option value="Insurance documentation">Ask about insurance documentation</option>
-                <option value="General inquiry">General business inquiry</option>
-              </select>
-
-              <label for="message">Your message (optional)</label>
-              <textarea id="message" name="message" placeholder="Tell us how we can contact you or assist with scheduling. Please do not include medical records or sensitive health information."></textarea>
-
-              <p class="note">
-                When you submit, your email application should open with the inquiry prepared.
-                You must press Send in that application. This website does not store or automatically
-                transmit form submissions.
-              </p>
-
-              <button class="btn" type="submit" style="width:100%;margin-top:12px;cursor:pointer">
-                Prepare Email Inquiry
-              </button>
-              <p id="formStatus" class="note" role="status" aria-live="polite"></p>
-            </form>
-
-            <div style="border-top:1px solid #e6ddd2;margin-top:24px;padding-top:20px">
-              <p><strong>Ready to book instead?</strong></p>
-              <a class="btn secondary" style="display:block;text-align:center" href="https://calendly.com/rxwigprecision-info" target="_blank" rel="noopener noreferrer">
-                Book your consultation online
-              </a>
+          <div>
+            <div class="contact-photo">
+              <img src="contact-consultation.jpg"
+                   alt="A specialist consulting with a client in an elegant wig studio"
+                   loading="lazy">
             </div>
+            <p class="contact-photo-caption">
+              Compassionate, personalized cranial prosthesis support in a welcoming setting.
+            </p>
           </div>
         </div>
       </div>
@@ -439,36 +414,6 @@ We provide a process that facilitates questions, choices, and decision making at
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const contactForm = document.getElementById("contactForm");
-
-    if (contactForm) {
-      contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const businessEmail = "info@rxwigprecision.com";
-        const formData = new FormData(contactForm);
-
-        const subject = encodeURIComponent(
-          "Consultation Inquiry - Rx Wig Precision, LLC"
-        );
-
-        const body = encodeURIComponent(
-          "Consultation inquiry for Rx Wig Precision, LLC\n\n" +
-          "Name: " + (formData.get("name") || "") + "\n" +
-          "Email: " + (formData.get("email") || "") + "\n" +
-          "Phone: " + (formData.get("phone") || "") + "\n" +
-          "Inquiry type: " + (formData.get("reason") || "") + "\n\n" +
-          "Message:\n" + (formData.get("message") || "")
-        );
-
-        document.getElementById("formStatus").textContent =
-          "Your email application should open with your inquiry prepared. Please review and send it to complete your request.";
-
-        window.location.href =
-          "mailto:" + businessEmail + "?subject=" + subject + "&body=" + body;
-      });
-    }
   </script>
 </body>
 </html>
