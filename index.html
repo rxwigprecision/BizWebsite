@@ -100,50 +100,218 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <div class="section-head"><div class="eyebrow">Start a conversation</div><h2>Request a private consultation</h2><p>Reach out to ask a question or discuss an appointment. Please avoid sending medical records or other sensitive health information through this general form.</p></div>
-        <div class="contact-grid">
-          <div>
-            <h3>We're here to help you explore your options.</h3>
-            <p>Serving Atlanta, Georgia and surrounding communities.</p>
-            <p><strong>Phone:</strong> [Add business phone number]</p>
-            <p><strong>Email:</strong> [Add business email address]</p>
-            <p><strong>Appointments:</strong> By appointment / [confirm availability and location]</p>
-            <p class="note" style="color:#d9cfc5">Replace all bracketed details before publishing. Add your scheduling link here if you use an online booking service.</p>
-          </div>
-          <div class="contact-box">
-            <form id="contactForm">
-              <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required>
-              <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required>
-              <label for="phone">Phone number (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel">
-              <label for="reason">How can we help?</label>
-              <select id="reason" name="reason"><option>Request a consultation</option><option>Ask about services</option><option>Ask about insurance documentation</option><option>Other question</option></select>
-              <label for="message">Message (please do not include medical details)</label><textarea id="message" name="message" placeholder="Tell us the best way and time to reach you."></textarea>
-              <button class="btn" type="submit" style="margin-top:16px;cursor:pointer">Prepare Email Request</button>
-              <p class="note">This starter form opens your email app; it does not store or submit information to a server. Add a secure form or booking integration before relying on online submissions.</p>
-              <p id="formStatus" class="note" aria-live="polite"></p>
-            </form>
-          </div>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Your Next Step Begins Here</div>
+      <h2>Let's Connect</h2>
+      <p>
+        Whether you are exploring cranial prosthesis options or ready to
+        schedule a consultation, we are here to help you take the next step
+        with confidence, care, and personal attention.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- BUSINESS CONTACT INFORMATION -->
+      <div>
+        <div class="eyebrow">Personalized Care</div>
+        <h3>Care That Begins With Listening.</h3>
+
+        <p>
+          At Rx Wig Precision, LLC, we believe your experience deserves
+          thoughtful attention and individualized care. Contact us to ask
+          about our services or schedule a private consultation.
+        </p>
+
+        <div style="margin:28px 0;padding:24px;background:#fffdf9;color:#302a26;border-left:3px solid #a8875b;">
+          <h3 style="margin-top:0;">Contact Our Office</h3>
+
+          <p>
+            <strong>Email</strong><br>
+            <a href="mailto:info@rxwigprecision.com">
+              info@rxwigprecision.com
+            </a>
+          </p>
+
+          <p>
+            <strong>Service Area</strong><br>
+            Atlanta, Georgia
+          </p>
+
+          <p>
+            <strong>Consultations</strong><br>
+            By appointment
+          </p>
         </div>
+
+        <p>
+          <strong>Prefer to choose your own appointment time?</strong>
+        </p>
+
+        <p>
+          Use our online booking page to view available consultation times.
+        </p>
+
+        <a
+          class="btn"
+          href="https://calendly.com/rxwigprecision-info"
+          target="_blank"
+          rel="noopener noreferrer">
+          Schedule with Calendly
+        </a>
+
       </div>
-    </section>
-  </main>
+
+      <!-- CONSULTATION INQUIRY FORM -->
+      <div class="contact-box">
+
+        <div class="eyebrow">Consultation Inquiry</div>
+        <h3>How Can We Assist You?</h3>
+
+        <p class="muted">
+          Complete the form below to prepare an inquiry to our business email.
+        </p>
+
+        <form id="contactForm">
+
+          <label for="name">Full Name *</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            placeholder="Enter your full name"
+            required>
+
+          <label for="email">Email Address *</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="Enter your email address"
+            required>
+
+          <label for="phone">Phone Number (Optional)</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="Enter your phone number">
+
+          <label for="reason">How May We Help You? *</label>
+          <select id="reason" name="reason" required>
+            <option value="">Please select an option</option>
+            <option value="Private consultation">
+              Schedule a private consultation
+            </option>
+            <option value="Cranial prosthesis services">
+              Ask about cranial prosthesis services
+            </option>
+            <option value="Fitting and styling">
+              Ask about fitting and styling
+            </option>
+            <option value="Insurance documentation">
+              Ask about insurance documentation
+            </option>
+            <option value="General inquiry">
+              General business inquiry
+            </option>
+          </select>
+
+          <label for="message">Your Message (Optional)</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us how we can contact you or assist with scheduling. Please do not include medical records or sensitive health information."></textarea>
+
+          <p class="note">
+            Your information will be prepared in an email using your own
+            email application. Submitting this form does not automatically
+            transmit your information to our website.
+          </p>
+
+          <button class="btn" type="submit" style="width:100%;margin-top:12px;">
+            Send Consultation Inquiry
+          </button>
+
+          <p
+            id="formStatus"
+            class="note"
+            role="status"
+            aria-live="polite">
+          </p>
+
+        </form>
+
+        <div style="border-top:1px solid #e6ddd2;margin-top:24px;padding-top:20px;">
+          <p style="margin-bottom:12px;">
+            <strong>Ready to book instead?</strong>
+          </p>
+          <a
+            class="btn secondary"
+            style="display:block;text-align:center;"
+            href="https://calendly.com/rxwigprecision-info"
+            target="_blank"
+            rel="noopener noreferrer">
+            Book Your Consultation Online
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
   <footer><div class="wrap foot"><span>© <span id="year"></span> Rx Wig Precision, LLC. All rights reserved.</span><span>Atlanta, Georgia • Personalized cranial prosthesis services</span></div></footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const email = 'REPLACE-WITH-YOUR-BUSINESS-EMAIL@example.com';
-      if(email.startsWith('REPLACE-')){
-        document.getElementById('formStatus').textContent = 'The form is a demo. Add your real business email in the website code before publishing.';
-        return;
-      }
-      const d = new FormData(this);
-      const subject = encodeURIComponent('Consultation request — Rx Wig Precision');
-      const body = encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone: '+d.get('phone')+'\nReason: '+d.get('reason')+'\nMessage: '+d.get('message'));
-      window.location.href = 'mailto:'+email+'?subject='+subject+'&body='+body;
-    });
-  </script>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const businessEmail = 'info@rxwigprecision.com';
+    const formData = new FormData(contactForm);
+
+    const name = formData.get('name') || '';
+    const email = formData.get('email') || '';
+    const phone = formData.get('phone') || '';
+    const reason = formData.get('reason') || '';
+    const message = formData.get('message') || '';
+
+    const subject = encodeURIComponent(
+      'Consultation Inquiry - Rx Wig Precision, LLC'
+    );
+
+    const body = encodeURIComponent(
+      'New consultation inquiry for Rx Wig Precision, LLC\n\n' +
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Phone: ' + phone + '\n' +
+      'Inquiry Type: ' + reason + '\n\n' +
+      'Message:\n' + message
+    );
+
+    const mailtoLink =
+      'mailto:' + businessEmail +
+      '?subject=' + subject +
+      '&body=' + body;
+
+    document.getElementById('formStatus').textContent =
+      'Your email application should open with your inquiry prepared. ' +
+      'Please review and send the email to complete your request.';
+
+    window.location.href = mailtoLink;
+  });
+}
+</script>
 </body>
 </html>
