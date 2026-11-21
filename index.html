@@ -1,419 +1,216 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rx Wig Precision, LLC offers personalized cranial prosthesis consultations and hair replacement support in Atlanta, Georgia.">
-  <title>Rx Wig Precision, LLC | Personalized Cranial Prosthesis Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rx Wig Precision, LLC</title>
+
   <style>
-    :root {
-      --ink: #302a26;
-      --muted: #6d6259;
-      --cream: #f8f4ee;
-      --paper: #fffdf9;
-      --gold: #a8875b;
-      --gold-dark: #80613e;
-      --line: #e6ddd2;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
-    }
-
-    h1, h2, h3, .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-      line-height: 1.15;
-    }
-
-    a { color: inherit; }
-    .wrap { width: min(1120px, 92%); margin: auto; }
-
-    .topbar {
-      background: var(--ink);
-      color: #fff8f0;
-      text-align: center;
-      padding: 8px 14px;
-      font-size: .82rem;
-      letter-spacing: .04em;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      color: #4a3528;
+      background: #fffaf5;
     }
 
     header {
-      background: rgba(255,253,249,.96);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 5;
-    }
-
-    .nav {
+      background: linear-gradient(120deg, #f7d4b8, #fce8d8, #f4c49f);
+      padding: 22px 8%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding: 17px 0;
-    }
-
-    .brand { font-size: 1.45rem; letter-spacing: .02em; }
-    .brand small {
-      display: block;
-      font: .64rem Arial, sans-serif;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    nav { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
-    nav a { text-decoration: none; font-size: .9rem; }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 20px;
-      background: var(--gold-dark);
-      color: white;
-      text-decoration: none;
-      border: 1px solid var(--gold-dark);
-      border-radius: 2px;
-      font-size: .9rem;
-      letter-spacing: .02em;
-    }
-
-    .btn.secondary { background: transparent; color: var(--gold-dark); }
-
-    .hero {
-      background: linear-gradient(105deg, rgba(248,244,238,.97), rgba(248,244,238,.84)),
-        radial-gradient(circle at 80% 20%, #e8d8c4, transparent 45%);
-      padding: 88px 0 82px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 50px;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .eyebrow {
-      color: var(--gold-dark);
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .19em;
+    header h2 {
+      color: #70452f;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #70452f;
+      text-decoration: none;
+      margin-left: 22px;
       font-weight: bold;
     }
 
-    h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin: 16px 0 20px; max-width: 720px; }
-    .hero p { font-size: 1.12rem; color: var(--muted); max-width: 630px; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-
-    .photo-frame {
-      overflow: hidden;
-      min-height: 360px;
-      border: 1px solid #d7c7b3;
-      background: #e9dfd3;
+    nav a:hover {
+      color: #a65f32;
     }
 
-    .photo-frame img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      min-height: 360px;
-      object-fit: cover;
+    .hero {
+      text-align: center;
+      padding: 85px 8%;
+      background: linear-gradient(135deg, #fce8d8, #f6c49e, #eaa575);
     }
 
-    .contact-photo {
-      overflow: hidden;
-      border: 1px solid rgba(255,248,240,.22);
+    .hero h1 {
+      font-size: 38px;
+      color: #70452f;
+      margin-bottom: 18px;
     }
 
-    .contact-photo img {
-      display: block;
-      width: 100%;
-      min-height: 360px;
-      height: 100%;
-      object-fit: cover;
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 19px;
     }
 
-    .contact-photo-caption {
-      color: #e6ddd2;
-      font-size: .9rem;
-      margin-top: 12px;
+    section {
+      padding: 65px 10%;
     }
 
-    section { padding: 76px 0; }
-    .section-head { text-align: center; max-width: 700px; margin: 0 auto 38px; }
-    h2 { font-size: clamp(2rem, 3vw, 3rem); margin: 12px 0 14px; }
-    .section-head p, .muted { color: var(--muted); }
-
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { padding: 27px; background: #fff; border: 1px solid var(--line); }
-    .card .num { font: 1.7rem Georgia, serif; color: var(--gold); }
-    .card h3 { font-size: 1.45rem; margin: 12px 0; }
-    .card p { color: var(--muted); font-size: .96rem; }
-
-    .about { background: var(--cream); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 50px;
-      align-items: center;
+    section h2 {
+      color: #87502f;
+      font-size: 29px;
+      margin-bottom: 22px;
     }
 
-    .quote-panel {
-      padding: 34px;
-      background: #e9dfd3;
-      border-left: 3px solid var(--gold);
+    #about {
+      background: linear-gradient(120deg, #fffaf5, #fce8d8);
     }
 
-    .quote-panel p { font: 1.6rem Georgia, serif; margin: 0; }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 28px; }
-    .step { border-top: 1px solid var(--gold); padding-top: 17px; }
+    #about p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
 
-    .contact { background: var(--ink); color: #fff8f0; }
-    .contact .section-head p { color: #d9cfc5; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    #services {
+      background: linear-gradient(120deg, #fce8d8, #f8d2b5);
+    }
 
-    .note { font-size: .82rem; color: var(--muted); }
+    #contact {
+      background: linear-gradient(120deg, #fffaf5, #fce8d8);
+    }
+
+    .email {
+      color: #9b542c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .email:hover {
+      text-decoration: underline;
+    }
 
     footer {
-      padding: 26px 0;
-      background: #241f1c;
-      color: #d8cec4;
-      font-size: .82rem;
+      text-align: center;
+      padding: 22px;
+      color: #70452f;
+      background: linear-gradient(120deg, #e8a575, #f2c49f, #e9a779);
     }
 
-    footer .foot {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
 
-    @media (max-width: 780px) {
-      .nav { align-items: flex-start; flex-direction: column; }
-      nav { gap: 13px; }
-      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero { padding: 58px 0; }
-      .photo-frame, .photo-frame img, .contact-photo img { min-height: 260px; }
-      .cards, .steps { grid-template-columns: 1fr; }
-      section { padding: 56px 0; }
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      section {
+        padding: 45px 7%;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="topbar">Personalized cranial prosthesis support • Atlanta, Georgia</div>
 
   <header>
-    <div class="wrap nav">
-      <a class="brand" href="#home" style="text-decoration:none">
-        Rx Wig Precision, LLC
-        <small>Personalized cranial prosthesis care</small>
-      </a>
+    <h2>Rx Wig Precision, LLC</h2>
 
-      <nav aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#approach">Our Approach</a>
-        <a href="#insurance">Insurance</a>
-        <a href="#contact">Contact</a>
-        <a class="btn" href="#contact">Request a Consultation</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">
-            We provide personalized cranial prosthesis solutions that complement individual needs, preferences, and lifestyle.
-          </div>
+  <div class="hero">
+    <h1>Rx Wig Precision, LLC</h1>
 
-          <h1>
-            Hair loss is a deeply personal experience that affects appearance, self confidence, and emotional well-being. We are here to partner with you for unique solutions.
-          </h1>
+    <p>
+      Hair loss can be a life altering experience. My mission is to
+      precisely combine my expertise with personalized service,
+      compassion, and project management to help individuals navigate
+      their journey with confidence and peace of mind.
+    </p>
+  </div>
 
-          <p>
-            Curated, unique, and thoughtful care for men, women, and children experiencing any type of hair loss. We desire to partner with you to explore hair replacement options.
-          </p>
+  <section id="about">
+    <h2>About</h2>
 
-          <div class="actions">
-            <a class="btn" href="https://calendly.com/rxwigprecision-info" target="_blank" rel="noopener noreferrer">
-              Book a Consultation
-            </a>
-          </div>
-        </div>
+    <p>
+      My approach is centered on respectful, personalized service and
+      helping clients understand medical wig options that may fit their
+      needs, preferences, and lifestyle. My project management
+      background (PMP) sets my work apart. My mission is to precisely
+      combine my expertise in these areas to help individuals navigate
+      their hair-loss journey with increased confidence and peace of mind.
+    </p>
 
-        <div class="photo-frame">
-          <img src="hero-wig.jpg"
-               alt="Long, dark brown hair wig displayed on a mannequin in a warm, elegant setting"
-               loading="eager">
-        </div>
-      </div>
-    </section>
+    <p>
+      <strong>
+        I am interested in providing assistance and/or partnering with
+        facilities and businesses for client engagements, procurement,
+        referrals, education, and/or project management. This can be in
+        person and/or virtually.
+      </strong>
+    </p>
 
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">Services</div>
-          <h2>A Process Personalized for You.</h2>
-          <p>
-            Every person's needs, preferences, and circumstances are different. We begin by listening
-            and discussing the options that may be right for you.
-          </p>
-        </div>
+    <p>
+      <strong>
+        If I may assist with your day-to-day with clients or operations,
+        let's connect.
+      </strong>
+    </p>
+  </section>
 
-        <div class="cards">
-          <article class="card">
-            <div class="num">01</div>
-            <h3>Cranial Prosthesis Consultation</h3>
-            <p>A private conversation about your needs, style preferences, insurance coverage, and the hair replacement options available to you.</p>
-          </article>
+  <section id="services">
+    <h2>Services</h2>
 
-          <article class="card">
-            <div class="num">02</div>
-            <h3>Personalized Fitting &amp; Style</h3>
-            <p>Measurements and product sourcing recommendations are discussed to facilitate fit, comfort, and your preferred style.</p>
-          </article>
+    <p>
+      Personalized medical wig guidance and support, along with
+      opportunities to assist facilities and businesses with client
+      engagements, procurement, referrals, education, and project
+      management.
+    </p>
+  </section>
 
-          <article class="card">
-            <div class="num">03</div>
-            <h3>Maintenance &amp; Support</h3>
-            <p>Steps and guidance on prosthesis care and maintenance for longevity.</p>
-          </article>
-        </div>
+  <section id="contact">
+    <h2>Contact</h2>
 
-        <p class="note" style="text-align:center;margin-top:20px">
-          Along these steps, thorough project management skills are applied to ensure there is full alignment, no delays, and effective communication.
-        </p>
-      </div>
-    </section>
-
-    <section class="about" id="approach">
-      <div class="wrap about-grid">
-        <div class="quote-panel">
-          <p>“Your experience is personal, your care will be too.”</p>
-        </div>
-
-        <div>
-          <div class="eyebrow">The Rx Wig Precision mission</div>
-          <h2>Care delivered with compassion and precision.</h2>
-
-          <p class="muted">
-            Our mission is to precisely combine personalized service, compassion, and project management to help individuals navigate their hair-loss journey with confidence and peace of mind. We provide a process that facilitates questions, choices, and decision making at your own pace.
-          </p>
-
-          <p class="muted">
-            We value discretion, clear communication, and personalized attention throughout your consultation and fitting process.
-          </p>
-
-          <a class="btn" href="#contact">Let's Talk About Your Needs</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="insurance">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">Planning your visit</div>
-          <h2>Questions about insurance?</h2>
-          <p>
-            Coverage for cranial prostheses varies by plan and individual circumstances. We encourage
-            clients to contact their insurer to ask about eligibility, documentation, reimbursement,
-            and any required prescription. If assistance is needed, you can schedule a consultation and we can discuss next steps.
-          </p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <h3>Ask your insurer</h3>
-            <p class="muted">Confirm whether your plan covers a cranial prosthesis and what terminology or benefit category it uses.</p>
-          </div>
-
-          <div class="step">
-            <h3>Check documentation</h3>
-            <p class="muted">Ask whether a prescription, letter of medical necessity, invoice, or specific billing code is required.</p>
-          </div>
-
-          <div class="step">
-            <h3>Discuss next steps</h3>
-            <p class="muted">Email or schedule a consultation with Rx Wig Precision to discuss the information you have and what documentation is required.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">Your next step begins here</div>
-          <h2>Let's Connect</h2>
-          <p>
-            Whether you are exploring cranial prosthesis options or ready to schedule a consultation,
-            we are here to help you take the next step with confidence, care, and personal attention.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <div>
-            <div class="eyebrow">Personalized care</div>
-            <h3>Care that begins with listening.</h3>
-            <p>
-              At Rx Wig Precision, LLC, we believe your experience deserves thoughtful attention and
-              individualized care. Contact us to ask about our services or schedule a private consultation.
-            </p>
-
-            <div style="margin:28px 0;padding:24px;background:#fffdf9;color:#302a26;border-left:3px solid #a8875b">
-              <h3 style="margin-top:0">Contact our office</h3>
-              <p>
-                <strong>Email</strong><br>
-                <a href="mailto:info@rxwigprecision.com">info@rxwigprecision.com</a>
-              </p>
-              <p><strong>Service area</strong><br>Atlanta, Georgia</p>
-              <p><strong>Consultations</strong><br>By appointment</p>
-            </div>
-
-            <p><strong>Prefer to choose your own appointment time?</strong></p>
-            <p>Use our online booking page to view available consultation times.</p>
-
-            <a class="btn" href="https://calendly.com/rxwigprecision-info" target="_blank" rel="noopener noreferrer">
-              Schedule with Calendly
-            </a>
-          </div>
-
-          <div>
-            <div class="contact-photo">
-              <img src="contact-consultation.jpg"
-                   alt="A specialist consulting with a client in an elegant wig studio"
-                   loading="lazy">
-            </div>
-            <p class="contact-photo-caption">
-              Compassionate, personalized cranial prosthesis support in a welcoming setting.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <p>
+      Email:
+      <a class="email" href="mailto:info@rxwigprecision.com">
+        info@rxwigprecision.com
+      </a>
+    </p>
+  </section>
 
   <footer>
-    <div class="wrap foot">
-      <span>© <span id="year"></span> Rx Wig Precision, LLC. All rights reserved.</span>
-      <span>Atlanta, Georgia • Personalized cranial prosthesis services</span>
-    </div>
+    <p>&copy; 2026 Rx Wig Precision, LLC. All rights reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
