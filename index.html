@@ -60,13 +60,21 @@
     .hero h1 {
       font-size: 38px;
       color: #70452f;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
-    .hero p {
+    .hero .intro {
       max-width: 850px;
-      margin: auto;
-      font-size: 19px;
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: bold;
+      color: #70452f;
+    }
+
+    .hero .mission {
+      max-width: 850px;
+      margin: 20px auto 0;
+      font-size: 17px;
     }
 
     section {
@@ -92,6 +100,41 @@
       background: linear-gradient(120deg, #fce8d8, #f8d2b5);
     }
 
+    .services-intro {
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: rgba(255, 250, 245, 0.95);
+      border: 1px solid #e8bd9e;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 5px 16px rgba(112, 69, 47, 0.10);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 9px 22px rgba(112, 69, 47, 0.16);
+    }
+
+    .service-card h3 {
+      color: #87502f;
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 16px;
+    }
+
     #contact {
       background: linear-gradient(120deg, #fffaf5, #fce8d8);
     }
@@ -113,7 +156,7 @@
       background: linear-gradient(120deg, #e8a575, #f2c49f, #e9a779);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
       header {
         flex-direction: column;
         text-align: center;
@@ -129,6 +172,10 @@
 
       section {
         padding: 45px 7%;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -149,7 +196,12 @@
   <div class="hero">
     <h1>Rx Wig Precision, LLC</h1>
 
-    <p>
+    <p class="intro">
+      Cranial prosthetic and medical wig solutions for individuals
+      experiencing temporary or permanent hair loss.
+    </p>
+
+    <p class="mission">
       Hair loss can be a life altering experience. My mission is to
       precisely combine my expertise with personalized service,
       compassion, and project management to help individuals navigate
@@ -189,12 +241,46 @@
   <section id="services">
     <h2>Services</h2>
 
-    <p>
-      Personalized medical wig guidance and support, along with
-      opportunities to assist facilities and businesses with client
-      engagements, procurement, referrals, education, and project
-      management.
+    <p class="services-intro">
+      Personalized support and professional services designed to help
+      clients navigate their cranial prosthesis journey.
     </p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Consultations</h3>
+        <p>
+          Providing custom measurements, prosthesis recommendations,
+          and product sourcing are pivotal for client success.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Insurance Assistance</h3>
+        <p>
+          I meet with clients to navigate the confusing health insurance
+          industry and verify their specific coverages.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Education</h3>
+        <p>
+          Prosthesis maintenance and care for daily and extended wear.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Project Management</h3>
+        <p>
+          As a certified project management professional (PMP), I ensure
+          the full cranial prosthesis process is given precise attention
+          and communication.
+        </p>
+      </div>
+
+    </div>
   </section>
 
   <section id="contact">
